@@ -39,10 +39,23 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-s0-sbe">
+                                        <rect key="frame" x="560" y="12" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Igh-bO-HPW"/>
+                                            <constraint firstAttribute="width" constant="32" id="qLA-fs-WCJ"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvR-eb-zqm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ehZ-s0-sbe" firstAttribute="top" secondItem="Yzv-UG-nq1" secondAttribute="top" constant="12" id="84o-0q-sS6"/>
                                     <constraint firstAttribute="height" constant="55" id="8wW-Vd-PPG"/>
+                                    <constraint firstAttribute="trailing" secondItem="ehZ-s0-sbe" secondAttribute="trailing" constant="8" id="TCt-Oz-peQ"/>
                                     <constraint firstItem="MgI-KL-ezV" firstAttribute="centerX" secondItem="Yzv-UG-nq1" secondAttribute="centerX" id="dWK-3M-ORi"/>
                                     <constraint firstItem="MgI-KL-ezV" firstAttribute="centerY" secondItem="Yzv-UG-nq1" secondAttribute="centerY" id="lSY-XK-BIb"/>
                                 </constraints>
@@ -132,11 +145,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="349"/>
+            <point key="canvasLocation" x="306" y="359"/>
         </scene>
     </scenes>
     <resources>
         <image name="385" width="96" height="96"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
