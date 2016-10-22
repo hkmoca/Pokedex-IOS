@@ -6,7 +6,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2014-2016 Hearst
+//  Copyright (c) 2014-2015 Hearst
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,25 +28,25 @@
 
 import Foundation
 
-open class DateTransform: TransformType {
-	public typealias Object = Date
+public class DateTransform: TransformType {
+	public typealias Object = NSDate
 	public typealias JSON = Double
 
 	public init() {}
 
-	open func transformFromJSON(_ value: Any?) -> Date? {
+	public func transformFromJSON(value: AnyObject?) -> NSDate? {
 		if let timeInt = value as? Double {
-			return Date(timeIntervalSince1970: TimeInterval(timeInt))
+			return NSDate(timeIntervalSince1970: NSTimeInterval(timeInt))
 		}
 		
 		if let timeStr = value as? String {
-			return Date(timeIntervalSince1970: TimeInterval(atof(timeStr)))
+			return NSDate(timeIntervalSince1970: NSTimeInterval(atof(timeStr)))
 		}
 		
 		return nil
 	}
 
-	open func transformToJSON(_ value: Date?) -> Double? {
+	public func transformToJSON(value: NSDate?) -> Double? {
 		if let date = value {
 			return Double(date.timeIntervalSince1970)
 		}
