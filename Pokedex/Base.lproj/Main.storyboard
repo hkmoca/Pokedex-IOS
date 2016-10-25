@@ -382,6 +382,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseAttack" destination="xh4-hw-lEz" id="kMD-pd-p0h"/>
                         <outlet property="currentEvoImg" destination="egk-bL-F2s" id="MG0-2T-e6f"/>
                         <outlet property="defenseLbl" destination="6Rx-Ib-B8y" id="f9k-SS-Ehn"/>
                         <outlet property="descriptionLbl" destination="aqZ-2O-D2Q" id="MAa-Ta-Vcj"/>
